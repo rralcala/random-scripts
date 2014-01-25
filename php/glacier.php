@@ -1,5 +1,5 @@
 <?php
-  $data = array("Date" => '2013-01-12', "Authorization" => 'vPwerCzUC0v5aCKjePKcX8N8Zw6bntfFSiMyrMfT', "x-amz-glacier-version" => "2012-06-01");
+  $data = array("Date" => '2013-01-12', "Authorization" => 'vPwe', "x-amz-glacier-version" => "2012-06-01");
         $ch = curl_init('http://glacier.us-east-1.amazonaws.com' . '/6067-7486-2986/vaults/VaultName');
  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

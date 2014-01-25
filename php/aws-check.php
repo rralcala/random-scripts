@@ -8,8 +8,8 @@ use Aws\Common\Enum\Region;
 
 // Instantiate the DynamoDB client with your AWS credentials
 $client = DynamoDbClient::factory(array(
-  'key'    => 'AKIAILUTYWDOMB5GG5WQ',
-  'secret' => 'f3rNjfWCjqA0GdWblbjWOd1GY9X8F+/oYUc6JltJ',
+  'key'    => 'AKIA',
+  'secret' => 'secret-key',
   'region' => Region::US_EAST_1
 ));
 //echo 'AA'.$client->ssl_verification.'\n';
