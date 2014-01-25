@@ -9,3 +9,11 @@ do
           echo $file
         fi
 done
+
+echo "Another example:"
+
+for i in $(eval echo 1 2 3)
+do
+        echo "Welcome $i times"
+done
+
