@@ -28,6 +28,7 @@ fi
 
 virsh shutdown $vm_name
 
+date1=$(date +"%s")
 while [ $(virsh list | grep $vm_name | wc -l) -eq 1 ]; do
         sleep 1;
 done
@@ -35,25 +36,27 @@ done
 lvmsync /dev/$origin_vg/$origin_snap $dest_host:/dev/$dest_vg/$dest_lv
 
 if [ $? -eq 0 ]; then
-        lvremove -f $origin_vg/$origin_snap
-        lvcreate --snapshot -L5G -n $origin_snap $origin_vg/$origin_lv
-fi
-if [ $paranoid -eq 1 ]; then
-        local_sum=$(md5sum  /dev/$origin_vg/$origin_lv | awk '{ print $1; }')
-        echo $local_sum
+        lvcreate --snapshot -L5G -n $origin_snap-temp $origin_vg/$origin_lv
 fi
 
 virsh start $vm_name
 
+date2=$(date +"%s")
+
+echo "Aproximated downtime: $(($date2-$date1)) seconds."
 if [ $paranoid -eq 1 ]; then
+        echo Verifying remote image..
+        local_sum=$(md5sum /dev/$origin_vg/$origin_snap-temp | awk '{ print $1; }')
         remote_sum=$(ssh $dest_host "md5sum /dev/$dest_vg/$dest_lv" | awk '{ print $1; }')
-        echo $remote_sum
         if [ "$local_sum" == "$remote_sum" ]; then
                 echo Everything went fine.
-                exit 0
         else
                 echo Remote image corrupted.
                 exit 1
         fi
 fi
 
+lvremove -f $origin_vg/$origin_snap
+lvrename $origin_vg $origin_snap-temp $origin_snap
+
+exit 0
