@@ -5,12 +5,14 @@
 # migrations.
 #
 # Before using:
-# You'll need ruby 1.8+
+# Install ruby 1.8+
 # (both hosts) git clone git@github.com:rralcala/lvmsync.git (Acutal credits to: mpalmer/lvmsync)
 # (both hosts) add lvmsync to your path
 # lvcreate --snapshot -L5G -n origin_snap origin_vg/origin_lv
 # dd if=/dev/origin_vg/origin_snap bs=1M | ssh dest_host dd of=/dev/dest_vg/dest_lv bs=1M
 
+# Paranoid mode, 1 to enable, Please be aware that the check process is really slow!.
+paranoid=1
 origin_vg=vg_orion
 origin_lv=lv_amnesia_root
 origin_snap=lv_amnesia_root-snap
@@ -36,6 +38,22 @@ if [ $? -eq 0 ]; then
         lvremove -f $origin_vg/$origin_snap
         lvcreate --snapshot -L5G -n $origin_snap $origin_vg/$origin_lv
 fi
+if [ $paranoid -eq 1 ]; then
+        local_sum=$(md5sum  /dev/$origin_vg/$origin_lv | awk '{ print $1; }')
+        echo $local_sum
+fi
 
 virsh start $vm_name
+
+if [ $paranoid -eq 1 ]; then
+        remote_sum=$(ssh $dest_host "md5sum /dev/$dest_vg/$dest_lv" | awk '{ print $1; }')
+        echo $remote_sum
+        if [ "$local_sum" == "$remote_sum" ]; then
+                echo Everything went fine.
+                exit 0
+        else
+                echo Remote image corrupted.
+                exit 1
+        fi
+fi
 
