@@ -4,7 +4,6 @@
 
 /* Crappy on IO but PIPE compatible 
    Nice on memory.
-   Not a single parameter check
 */
 
 
