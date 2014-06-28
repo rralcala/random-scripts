@@ -1,7 +1,7 @@
 require './binary_tree.rb'
 require 'pp'
 module BinaryTree
-  
+  # Create a binary tree from an array recursively  
   def create_binary(a, startid, endid)
      return nil if startid > endid
      mid = (endid + startid) / 2
