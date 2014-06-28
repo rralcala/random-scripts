@@ -32,5 +32,28 @@ class Tree
      end
      
   end
+  def dfs()
+    do_dfs(@root)
+  end
+  def do_dfs(cur)
+     puts cur.val
+     do_dfs(cur.left) if !cur.left.nil?
+     do_dfs(cur.right) if !cur.right.nil?
+  end
+  def bfs()
+    queue = []
+    do_bfs(queue, @root)
+  end
+
+  def do_bfs(queue, cur)
+    queue.push cur
+    while queue.length > 0
+      cur = queue.shift 
+      puts cur.val
+      queue.push cur.left if !cur.left.nil?
+      queue.push cur.right if !cur.right.nil?
+    end
+  end
  end
+
 end

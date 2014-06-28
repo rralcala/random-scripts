@@ -16,6 +16,7 @@ end
 include BinaryTree
 puts 'hola'
 a = 10.times.map { Random.rand 200 }.sort
+a = (0..10).to_a
 t = Tree.new 1
 t.root = create_binary(a , 0 , a.size - 1)
-t.inorder
+t.bfs
