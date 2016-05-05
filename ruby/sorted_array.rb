@@ -39,6 +39,7 @@ class SortedArray < Array
   alias unshift <<
 end
 
+if __FILE__==$0
 a = SortedArray.new
 a << 1
 a << 3
@@ -50,4 +51,6 @@ a << 8
 a << 11
 a << 13
 a << 12
-a.each { |v| puts v } 
+a.each { |v| puts v }
+
+end 

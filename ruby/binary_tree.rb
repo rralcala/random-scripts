@@ -43,8 +43,8 @@ class Tree
   end
   def do_dfs(cur)
      puts cur.val
-     do_dfs(cur.left) if !cur.left.nil?
-     do_dfs(cur.right) if !cur.right.nil?
+     do_dfs(cur.left) unless cur.left.nil?
+     do_dfs(cur.right) unless cur.right.nil?
   end
 
   # Breadth first search
@@ -58,8 +58,8 @@ class Tree
     while queue.length > 0
       cur = queue.shift 
       puts cur.val
-      queue.push cur.left if !cur.left.nil?
-      queue.push cur.right if !cur.right.nil?
+      queue.push cur.left unless cur.left.nil?
+      queue.push cur.right unless cur.right.nil?
     end
   end
  end
