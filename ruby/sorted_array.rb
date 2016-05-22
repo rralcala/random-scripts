@@ -24,7 +24,6 @@ class SortedArray < Array
     if comp == 1
         binary_search value, from, mid - 1
     elsif comp == -1
-        
         binary_search value, mid + 1, to
     else
         mid
@@ -40,17 +39,16 @@ class SortedArray < Array
 end
 
 if __FILE__==$0
-a = SortedArray.new
-a << 1
-a << 3
-a << 7
-a << 100
-a << 2
-a << 1
-a << 8
-a << 11
-a << 13
-a << 12
-a.each { |v| puts v }
-
+  a = SortedArray.new
+  a << 1
+  a << 3
+  a << 7
+  a << 100
+  a << 2
+  a << 1
+  a << 8
+  a << 11
+  a << 13
+  a << 12
+  a.each { |v| puts v }
 end 
