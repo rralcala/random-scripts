@@ -1,6 +1,6 @@
 
 def parse(filename):
-    user_f = open(filename,'r')
+    user_f = open(filename, 'r')
     lines = {}
     for line in user_f:
         line = line.split('#')[0]
@@ -14,7 +14,7 @@ users = parse('/etc/passwd')
 groups = parse('/etc/group')
 
 keep = set()
-for k,v in groups.items():
+for k, v in groups.items():
     if len(v[3]) > 0:
         keep.add(k)
 
@@ -23,4 +23,4 @@ for k,v in users.items():
 
 for i in keep:
     if i in groups:
-        print groups[i][0]
+        print(groups[i][0])

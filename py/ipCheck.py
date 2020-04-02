@@ -1,13 +1,16 @@
 import string
 
 class Solution(object):
+    hex = set(string.hexdigits)
+
     NEITHER = "Neither"
     V4 = "IPv4"
     V6 = "IPv6"
-    def isHex(self, s):
-        hex = set(string.hexdigits)
-        for c in s:
-            if c not in hex:
+
+
+    def isHex(self, hex_string):
+        for c in hex_string:
+            if c not in self.hex:
                 return False
         return True
 
@@ -47,16 +50,17 @@ class Solution(object):
                 return self.NEITHER
         return self.V4
 
+
 s = Solution()
-print s.validIPAddress("01.01.01.01")
-print s.validIPAddress("123.145.132")
-print s.validIPAddress("123.145.132.234")
-print s.validIPAddress("0.0.0.255")
-print s.validIPAddress("0.0.0000.255")
-print s.validIPAddress("1e1.4.5.6")
-print s.validIPAddress("::1")
-print s.validIPAddress("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
-print s.validIPAddress("2001:db8:85a3:0:0:8A2E:0370:7334")
-print s.validIPAddress("2001:db8:85a3:0:0:8A2E:0370:7334")
-print s.validIPAddress("0.0.0000.255")
+print(s.validIPAddress("01.01.01.01"))
+print(s.validIPAddress("123.145.132"))
+print(s.validIPAddress("123.145.132.234"))
+print(s.validIPAddress("0.0.0.255"))
+print(s.validIPAddress("0.0.0000.255"))
+print(s.validIPAddress("1e1.4.5.6"))
+print(s.validIPAddress("::1"))
+print(s.validIPAddress("2001:0db8:85a3:0000:0000:8a2e:0370:7334"))
+print(s.validIPAddress("2001:db8:85a3:0:0:8A2E:0370:7334"))
+print(s.validIPAddress("2001:db8:85a3:0:0:8A2E:0370:7334"))
+print(s.validIPAddress("0.0.0000.255"))
 

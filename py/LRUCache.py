@@ -95,10 +95,10 @@ if __name__ == '__main__':
 
     for i in range(len(op)):
         if op[i] == "put":
-            print "put {} {}".format(par[i][0], par[i][1])
+            print("put {} {}".format(par[i][0], par[i][1]))
             cache.put(par[i][0], par[i][1])
         else:
-            print "get {}".format(par[i][0])
+            print("get {}".format(par[i][0]))
             cache.get(par[i][0])
     '''
     cache.put(1, 1)

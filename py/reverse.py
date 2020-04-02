@@ -4,11 +4,13 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
-        sign = x/x
-        x = abs(x)
-        s = str(x)
-        reversed(s)
+        ax = abs(x)
+        sign = x/ax
+        s = str(ax)[::-1]
         x = int(s) * sign
+        return x
+
 
 s = Solution()
-s.reverse()
+print(s.reverse(123))
+print(s.reverse(-123))
