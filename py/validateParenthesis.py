@@ -1,11 +1,9 @@
 class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+
+    @staticmethod
+    def is_valid(stack):
         l = []
-        for c in s:
+        for c in stack:
             if c == '{' or c == '[' or c == '(':
                 l.append(c)
             if c == ']':
@@ -23,9 +21,11 @@ class Solution(object):
         else:
             return False
 
-s = Solution()
-print(s.isValid("()[]{}"))
-print(s.isValid("(()"))
 
-print(s.isValid("]"))
+if __name__ == '__main__':
+    s = Solution()
+    print(s.isValid("()[]{}"))
+    print(s.isValid("(()"))
+
+    print(s.isValid("]"))
 

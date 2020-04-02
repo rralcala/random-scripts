@@ -59,7 +59,6 @@ class LRUCache(object):
         self.remove_node(node)
         self.append(node)
 
-
     def put(self, key, value):
         """
         :type key: int

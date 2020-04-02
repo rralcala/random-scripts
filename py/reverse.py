@@ -1,5 +1,7 @@
 class Solution(object):
-    def reverse(self, x):
+
+    @staticmethod
+    def reverse(x):
         """
         :type x: int
         :rtype: int
@@ -11,6 +13,7 @@ class Solution(object):
         return x
 
 
-s = Solution()
-print(s.reverse(123))
-print(s.reverse(-123))
+if __name__ == '__main__':
+    s = Solution()
+    print(s.reverse(123))
+    print(s.reverse(-123))

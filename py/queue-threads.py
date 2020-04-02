@@ -15,15 +15,16 @@ class Worker(threading.Thread):
             q.task_done()
 
 
-for w in range(10):
-    t = Worker()
-    t.daemon = True
-    t.start()
+if __name__ == '__main__':
+    for w in range(10):
+        t = Worker()
+        t.daemon = True
+        t.start()
 
-for i in range(1000):
-    q.put(i)
+    for i in range(1000):
+        q.put(i)
 
-time.sleep(10)
-for i in range(1000, 2000):
-    q.put(i)
-q.join()
+    time.sleep(10)
+    for i in range(1000, 2000):
+        q.put(i)
+    q.join()
