@@ -1,6 +1,6 @@
 import unittest
 
-'''https://leetcode.com/problems/design-hashmap/'''
+"""https://leetcode.com/problems/design-hashmap/"""
 
 
 class MyNode:
@@ -70,7 +70,11 @@ class MyHashMap:
         """
         h = hash(key) % self.LIST_SIZE
         if self.store[h]:
-            matches = [i for i in range(len(self.store[h])) if self.store[h] and self.store[h][i] and self.store[h][i].key == key]
+            matches = [
+                i
+                for i in range(len(self.store[h]))
+                if self.store[h] and self.store[h][i] and self.store[h][i].key == key
+            ]
             if matches:
                 del self.store[h][matches[0]]
 
@@ -84,7 +88,9 @@ class Tests(unittest.TestCase):
         for i in range(len(c)):
             method_to_call = getattr(o, c[i])
             results.append(method_to_call(*v[i]))
-        self.assertEqual(results, [None,-1,None,None,None,3,None,None,None,None])
+        self.assertEqual(
+            results, [None, -1, None, None, None, 3, None, None, None, None]
+        )
 
 
 if __name__ == "__main__":

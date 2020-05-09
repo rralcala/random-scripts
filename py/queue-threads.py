@@ -10,12 +10,12 @@ class Worker(threading.Thread):
         threading.Thread.__init__(self)
 
     def run(self):
-        while(True):
+        while True:
             print(q.get())
             q.task_done()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for w in range(10):
         t = Worker()
         t.daemon = True

@@ -2,7 +2,7 @@ from collections import Counter
 import heapq
 import unittest
 
-'''https://leetcode.com/problems/task-scheduler'''
+"""https://leetcode.com/problems/task-scheduler"""
 
 
 class Solution:
@@ -35,9 +35,16 @@ class Solution:
 class Tests(unittest.TestCase):
     def test_examples(self):
         o = Solution()
-        self.assertEqual(o.leastInterval(["A","A","A","A","A","A","B","C","D","E","F","G"], 2), 16)
-        self.assertEqual(o.leastInterval(["A","A","A","B","B","B"], 50), 104)
-        self.assertEqual(o.leastInterval(["A","B","C","D","E","A","B","C","D","E"], 4), 10)
+        self.assertEqual(
+            o.leastInterval(
+                ["A", "A", "A", "A", "A", "A", "B", "C", "D", "E", "F", "G"], 2
+            ),
+            16,
+        )
+        self.assertEqual(o.leastInterval(["A", "A", "A", "B", "B", "B"], 50), 104)
+        self.assertEqual(
+            o.leastInterval(["A", "B", "C", "D", "E", "A", "B", "C", "D", "E"], 4), 10
+        )
 
 
 if __name__ == "__main__":

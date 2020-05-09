@@ -1,7 +1,7 @@
 import re
 import unittest
 
-'''https://leetcode.com/problems/unique-email-addresses/'''
+"""https://leetcode.com/problems/unique-email-addresses/"""
 
 
 class Solution:
@@ -12,9 +12,9 @@ class Solution:
         """
         domains = {}
         for email in emails:
-            user, domain = email.split('@')
+            user, domain = email.split("@")
             domains.setdefault(domain, set())
-            clean_user = re.sub('\.', '', user).split('+')[0]
+            clean_user = re.sub("\.", "", user).split("+")[0]
             domains[domain].add(clean_user)
         c = 0
         for l in domains.values():
@@ -27,7 +27,13 @@ class Solution:
 class Tests(unittest.TestCase):
     def test_examples(self):
         o = Solution()
-        o.numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"])
+        o.numUniqueEmails(
+            [
+                "test.email+alex@leetcode.com",
+                "test.e.mail+bob.cathy@leetcode.com",
+                "testemail+david@lee.tcode.com",
+            ]
+        )
 
 
 if __name__ == "__main__":

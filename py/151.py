@@ -3,9 +3,10 @@ class Solution:
         a = s.split(" ")
         out = []
         for w in a:
-            if w != '':
+            if w != "":
                 out.append(w)
-        return ' '.join(reversed(out))
+        return " ".join(reversed(out))
+
 
 print(Solution().reverseWords("  hello world!  ") == "world! hello")
 print(Solution().reverseWords("the sky is blue") == "blue is sky the")

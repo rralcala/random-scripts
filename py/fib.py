@@ -1,6 +1,6 @@
 import unittest
 
-'''Find the fibonacci number for n'''
+"""Find the fibonacci number for n"""
 
 memo = {}
 
@@ -20,5 +20,3 @@ class Tests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
-

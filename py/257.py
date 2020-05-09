@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:
         result = []
@@ -20,4 +21,3 @@ class Solution:
         if printpath:
             result.append("->".join(path))
         path.pop()
-

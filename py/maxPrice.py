@@ -17,6 +17,8 @@
 # Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 import sys
+
+
 def maxProfit(prices):
     return _maxProfit(prices, len(prices) - 1, 0, 0)
 
@@ -24,16 +26,17 @@ def maxProfit(prices):
 def _maxProfit(prices, depth, have, profit):
     if depth == 0:
         return profit
-    ret1 = 0#-sys.maxsize - 1
-    ret2 = 0 #-sys.maxsize - 1
+    ret1 = 0  # -sys.maxsize - 1
+    ret2 = 0  # -sys.maxsize - 1
     if have == 0:
         ret1 = _maxProfit(prices, depth - 1, prices[depth], profit)
     elif prices[depth] >= have:
         ret2 = _maxProfit(prices, depth - 1, 0, prices[depth] - have + profit)
 
     ret3 = _maxProfit(prices, depth - 1, have, profit)
-    #print("{} {} {}".format(ret1, ret2, ret3))
+    # print("{} {} {}".format(ret1, ret2, ret3))
     return max(ret1, ret2, ret3)
 
-print(maxProfit([7,1,5,3,6,4]))
-print(maxProfit([100,1,100,1,1,1]))
+
+print(maxProfit([7, 1, 5, 3, 6, 4]))
+print(maxProfit([100, 1, 100, 1, 1, 1]))

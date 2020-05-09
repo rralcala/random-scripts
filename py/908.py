@@ -1,6 +1,6 @@
 import unittest
 
-'''https://leetcode.com/problems/smallest-range-i/'''
+"""https://leetcode.com/problems/smallest-range-i/"""
 
 
 class Solution:
@@ -17,8 +17,8 @@ class Solution:
 class Tests(unittest.TestCase):
     def test_examples(self):
         o = Solution()
-        self.assertEqual(o.smallestRangeI([1,3,6], 3), 0)
-        self.assertEqual(o.smallestRangeI([0,10], 2), 6)
+        self.assertEqual(o.smallestRangeI([1, 3, 6], 3), 0)
+        self.assertEqual(o.smallestRangeI([0, 10], 2), 6)
         self.assertEqual(o.smallestRangeI([1], 0), 0)
 
 

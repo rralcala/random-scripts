@@ -46,12 +46,12 @@ class Solution(object):
                     return self.NEITHER
             except Exception:
                 return self.NEITHER
-            if (num[0] == '0' and len(num) > 1) or num[0] == '-':
+            if (num[0] == "0" and len(num) > 1) or num[0] == "-":
                 return self.NEITHER
         return self.V4
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     print(s.valid_ip_addr("01.01.01.01"))
     print(s.valid_ip_addr("123.145.132"))
@@ -64,4 +64,3 @@ if __name__ == '__main__':
     print(s.valid_ip_addr("2001:db8:85a3:0:0:8A2E:0370:7334"))
     print(s.valid_ip_addr("2001:db8:85a3:0:0:8A2E:0370:7334"))
     print(s.valid_ip_addr("0.0.0000.255"))
-
