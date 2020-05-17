@@ -2,7 +2,8 @@ import json
 from typing import List
 import unittest
 
-#Mergesort
+
+# TODO: Mergesort
 class Solution:
     def __init__(self):
         self.lower = 0
@@ -30,8 +31,8 @@ class Solution:
             for i, s in partials.items():
                 w += 1
                 if i + 1 < ln:
-                    new_partials[i+1] = s + nums[i+1]
-                    if self.check(new_partials[i+1]):
+                    new_partials[i + 1] = s + nums[i + 1]
+                    if self.check(new_partials[i + 1]):
                         c += 1
             partials = new_partials
         print(w)
@@ -44,9 +45,9 @@ class UnitTests(unittest.TestCase):
         self.assertEqual(Solution().countRangeSum([-2, 5, -1], -2, 2), 3)
         self.assertEqual(Solution().countRangeSum([], -2, 2), 0)
         self.assertEqual(Solution().countRangeSum([-3], -2, 2), 0)
-        with open('327-1.json') as f:
+        with open("327-1.json") as f:
             tc = json.load(f)
-            self.assertEqual(Solution().countRangeSum(*tc['params']), tc['expected'])
+            self.assertEqual(Solution().countRangeSum(*tc["params"]), tc["expected"])
 
 
 if __name__ == "__main__":
