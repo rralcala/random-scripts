@@ -43,7 +43,8 @@ class UnitTest(unittest.TestCase):
     def test3(self):
         self.assertEqual(
             Solution().findLongestWord(
-                "wsmzffsupzgauxwokahurhhikapmqitytvcgrfpavbxbmmzdhnrazartkzrnsmoovmiofmilihynvqlmwcihkfskwozyjlnpkgdkayioieztjswgwckmuqnhbvsfoevdynyejihombjppgdgjbqtlauoapqldkuhfbynopisrjsdelsfspzcknfwuwdcgnaxpevwodoegzeisyrlrfqqavfziermslnlclbaejzqglzjzmuprpksjpqgnohjjrpdlofruutojzfmianxsbzfeuabhgeflyhjnyugcnhteicsvjajludwizklkkosrpvhhrgkzctzwcghpxnbsmkxfydkvfevyewqnzniofhsriadsoxjmsswgpiabcbpdjjuffnbvoiwotrbvylmnryckpnyemzkiofwdnpnbhkapsktrkkkakxetvdpfkdlwqhfjyhvlxgywavtmezbgpobhikrnebmevthlzgajyrmnbougmrirsxi", [
+                "wsmzffsupzgauxwokahurhhikapmqitytvcgrfpavbxbmmzdhnrazartkzrnsmoovmiofmilihynvqlmwcihkfskwozyjlnpkgdkayioieztjswgwckmuqnhbvsfoevdynyejihombjppgdgjbqtlauoapqldkuhfbynopisrjsdelsfspzcknfwuwdcgnaxpevwodoegzeisyrlrfqqavfziermslnlclbaejzqglzjzmuprpksjpqgnohjjrpdlofruutojzfmianxsbzfeuabhgeflyhjnyugcnhteicsvjajludwizklkkosrpvhhrgkzctzwcghpxnbsmkxfydkvfevyewqnzniofhsriadsoxjmsswgpiabcbpdjjuffnbvoiwotrbvylmnryckpnyemzkiofwdnpnbhkapsktrkkkakxetvdpfkdlwqhfjyhvlxgywavtmezbgpobhikrnebmevthlzgajyrmnbougmrirsxi",
+                [
                     "houomawijiaapzefimigivujyfwspbovqbavbpgddrgdvqqeevvycrujocvlklmacnpdxevkfevmiqmfuhamckpgqhkkgmalcekcotabyfgrnyeazcwhjjdchaglanfxlsxqsocwobdwwzhbfjzvquhfrbozrkaoullwyztrligxuviwhbcrrcgmkiomtlygqnjsfclgodgzgyuyexstvydgibgzgjrwmrgiyfupjifjceftusjxldoccsxidcjwwocmtgwnnylafnssixvhespliqxgiapmuxebnnejxmepsztbuxjpwnalknpnuloverfzieomyslwztowdwdzjdgjujqfhdtqbwmutugdqaityhmoojcwijknnabqhufzyqppmptpsqxbzyvbxuulepwsynazkghswfmhhzxhreesbnt",
                     "qlldlqhnpysqdacqxdxnxmxtpjjqhauitcridafuleutqmrqkabyphrceumqxqytdknsuxiohpmepmvcirukvrbgdcvoldadvkgkzjniioqmesaerkwanacwilmszxtpxxyauvwtrvoivtnutxharrprplrtvctgbotigebbwiccxmqwsgqfxpgouepdsuwpmlyslajstvvapyofpaqikzxnahjdltjndxikiywbpijyycmtxtmcselnvppyxscgrwcapjejnawqsajxqnginymhdwxjnnceshmvnuwzulpdoqsemyuvpsjmlfgyagzlganrpfljteaqngaytayvwlzaannxqptjzfdjcsachwvwhdnbwnwqfacomyimtvlxowttytbzavxumajopufzxjqfxpllelutfjxnbworasomjaflsmmodphiiygtfkvskgakahkvjhtfhbkteolxiqqwukexyr",
                     "zwuqazijkxdbydiircfjfaiqpbitiqupvnkjlfojdzbnwyffhddikisqonqdkyovfgtixiyjfhixmovfuhzrolcdokdtynwklqmdtfhqdydvomsgkxznbrpadskaidcilrzhruqrttlklqdrvuuffqjvybkmwjdwenokrscwizvxcuermosgcckpkdvscpddbybyhedbmvmlumdksqoalhuiqnlgyzcpwhidlbbhkgcrpsknnnouniiqafbxaboyxmoocgwfzbeabvcjh",
@@ -544,7 +545,7 @@ class UnitTest(unittest.TestCase):
                     "vlqyklczmiihhotigbgfbqagedmoifrkxvvybywhynmjfackvqovoyocrtqzhbcylpfajglyhxhuplakcvfzqppsidwakmblufvushwaklfadfyhuwxhoecpsnnnqklpgvynmrfabrhozmggaeorlywbhwpbhbyfnhidzvfdooxr",
                     "dttetzwbnvjxdxdckrpgaztysslrsnztwhlsoeglxnpwfiwaqvoitkgjxaunpzylrbgycyenuhowbgqkyrsgjgyottavbodygjfhydoyakafprhhcspxyfnxhuduvhcqcqqlptgnyuvdmdsmwtnwndigevckxpkmpptxxfaxwkqwtlasibhzbcehcqbiprdfa",
                     "fcgewrfiepzrwljsdcnjvcuuxjafpobuluexysaslqlbtfiutgnnbwiqgyscsbwhposdqowglxiujvapxazflobwulrggmrvxeremqdzpxwbjzjoasujdscqebmnotwrwritduxiaofoneniqdbfvtvhmauvfhwopatxmnfjcydtvhgdmsbnoyuvjxolsoaztwbeiuktfkmczojpzzczwxumfkkiwsywexewogyshyechaabkolbgcbobrtdiizzwdsekuyixzzomqpghjnygouisyxnribpklckpcojiscacftjixookljzwaqbeefrozacghcmdswjjitjcnqehjlqpmxugchavfplqgaecfhzaxoxclpczmfvxiwvfqvzjznkjnjgvgfpttyocnisgnyaubergnhabxuggjaxttnoucnhglctmpmjotdapohpvvojwcdhnureb",
-                ]
+                ],
             ),
             "nbmxgkduynigvzuyblwjepn",
         )

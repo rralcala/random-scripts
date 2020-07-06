@@ -1,12 +1,14 @@
 import unittest
 
+
 class Solution:
     def arrangeWords(self, text: str) -> str:
         text = text[0].lower() + text[1:]
         words = text.split()
         words.sort(key=lambda x: len(x))
-        text = ' '.join(words)
+        text = " ".join(words)
         return text[0].upper() + text[1:]
+
 
 class TestCases(unittest.TestCase):
     def test(self):

@@ -22,7 +22,7 @@ class Solution:
 
         quality = []
         total_quality = 0.0
-        total_cost = 100000
+        total_cost = float("inf")
         for w in workers:
             total_quality += w.quality
             heapq.heappush(quality, -w.quality)
