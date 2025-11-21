@@ -1,41 +1,31 @@
-class Email:
-    def __init__(self, title, ids, references, date):
-        self.title = title
-        self.id = ids
-        self.references = references
-        self.date = date
-        self.childs = []
+#Using any programming language, read an input file and parse the strings to count how many times an email address is found.
 
+import re
+from collections import Counter
 
-def parse_tree(emails):
-    nodes = {}
-    for email in emails:
-        nodes[email.id] = email
+emails = {}
+def find_emails_in_file(filepath):
+    """
+    Finds and returns a list of all email addresses found in a given file.
+    """
+    email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    emails_found = []
 
-    for email in emails:
-        if len(email.references) == 1:
-            nodes[email.references[0]].childs.append(email)
-    return nodes
+    try:
+        with open(filepath, 'r', encoding='utf-8') as file:
+            for line in file:
+                emails_found = re.findall(email_pattern, line)
+                for email in emails_found:
+                    emails.setdefault(email, 0)
+                    emails[email] += 1
+    except FileNotFoundError:
+        print(f"Error: File not found at {filepath}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
+    return emails
 
-def print_tree(tree, d):
-    for k, v in tree.items():
-        print(f"{d} {v.title}")
-        # sort(v.childs,) sort on date
-        _print_tree(v, d + 1)
-
-
-def _print_tree(tree, d):
-    for v in tree.childs:
-        print(f"{d} {v.title}")
-        # sort(v.childs,) sort on date
-        _print_tree(v, d + 1)
-
-
-v1 = Email("Vacation", "1", [], "202001")
-v2 = Email("Re: Vacation", "2", ["1"], "202002")
-v3 = Email("Re: Vacation", "7", ["2"], "202002")
-v4 = Email("Re: Vacation", "8", ["2"], "202002")
-w1 = Email("Work", "4", [], "202003")
-t = parse_tree([v1, v2, v3, v4, w1])
-print_tree(t, 0)
+# Example usage:
+file_path = 'emails.txt'  # Replace with the actual path to your file
+found_emails = find_emails_in_file(file_path)
+print(found_emails)
