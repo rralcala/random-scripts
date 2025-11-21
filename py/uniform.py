@@ -1,5 +1,5 @@
-from math import floor, log10
 import sys
+from math import floor, log10
 
 
 def getUniformIntegerCountInIntervalB(A: int, B: int) -> int:

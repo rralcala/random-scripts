@@ -1,6 +1,6 @@
 import json
-from typing import List
 import unittest
+from typing import List
 
 
 # TODO: Mergesort

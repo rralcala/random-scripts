@@ -12,8 +12,9 @@
 # If you are having trouble getting this to work, create an issue and I'll see if I can help.
 
 import atexit
-import time
 import json
+import time
+
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 
 DELAY_BETWEEN_REQUESTS = (

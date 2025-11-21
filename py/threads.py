@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-import threading
 import subprocess
-import time
 import sys
+import threading
+import time
 
 plock = threading.Lock()
 threads = 32

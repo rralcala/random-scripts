@@ -1,6 +1,6 @@
-from collections import Counter
 import heapq
 import unittest
+from collections import Counter
 
 """https://leetcode.com/problems/task-scheduler"""
 

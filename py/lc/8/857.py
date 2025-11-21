@@ -1,6 +1,6 @@
-from typing import List
-import unittest
 import heapq
+import unittest
+from typing import List
 
 
 class Worker:

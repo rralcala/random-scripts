@@ -1,5 +1,5 @@
-from functools import cache
 import unittest
+from functools import cache
 
 
 class Solution:

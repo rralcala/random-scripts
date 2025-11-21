@@ -1,6 +1,6 @@
-from queue import Queue
 import threading
 import time
+from queue import Queue
 
 q = Queue()
 

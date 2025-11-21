@@ -1,7 +1,6 @@
-from typing import List
-
 # Write any import statements here
 import math
+from typing import List
 
 
 def available_s(p, n, k):

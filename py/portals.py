@@ -1,6 +1,6 @@
 import string
-from typing import Tuple, List
 import unittest
+from typing import List, Tuple
 
 
 def getSecondsRequired(R: int, C: int, G: List[List[str]]) -> int:
