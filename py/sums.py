@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
         total = sum(nums)
@@ -14,5 +15,6 @@ class Solution:
             if target in dp:
                 return True
         return False
-    
-print(Solution().canPartition([1,5,11,5]))
+
+
+print(Solution().canPartition([1, 5, 11, 5]))

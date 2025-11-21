@@ -1,6 +1,6 @@
 import random
 
-mines = [[0,0],[0,0],[0,0]]
+mines = [[0, 0], [0, 0], [0, 0]]
 placed = 0
 while placed < 3:
     x = random.randint(0, 2)

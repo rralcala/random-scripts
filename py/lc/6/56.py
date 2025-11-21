@@ -53,12 +53,14 @@ class Solution:
 class Tests(unittest.TestCase):
     def test1(self):
         self.assertEqual(
-            Solution().merge([[1, 4], [5, 6]]), [[1, 4], [5, 6]],
+            Solution().merge([[1, 4], [5, 6]]),
+            [[1, 4], [5, 6]],
         )
 
     def test2(self):
         self.assertEqual(
-            Solution().merge([[1, 4], [0, 0]]), [[0, 0], [1, 4]],
+            Solution().merge([[1, 4], [0, 0]]),
+            [[0, 0], [1, 4]],
         )
 
     def test3(self):
@@ -69,7 +71,8 @@ class Tests(unittest.TestCase):
 
     def test4(self):
         self.assertEqual(
-            Solution().merge([[1, 4], [4, 5]]), [[1, 5]],
+            Solution().merge([[1, 4], [4, 5]]),
+            [[1, 5]],
         )
 
 

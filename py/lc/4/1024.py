@@ -46,12 +46,14 @@ class UnitTests(unittest.TestCase):
 
     def test_json_case1(self):
         self.assertEqual(
-            Solution().videoStitching([[0, 6], [2, 9], [9, 10], [6, 10]], 10), 2,
+            Solution().videoStitching([[0, 6], [2, 9], [9, 10], [6, 10]], 10),
+            2,
         )
 
     def test_json_case2(self):
         self.assertEqual(
-            Solution().videoStitching([[0, 6], [0, 1], [1, 9], [6, 10]], 10), 2,
+            Solution().videoStitching([[0, 6], [0, 1], [1, 9], [6, 10]], 10),
+            2,
         )
 
 

@@ -32,12 +32,14 @@ class UnitTest(unittest.TestCase):
 
     def test2(self):
         self.assertEqual(
-            Solution().findLongestWord("abpcplea", ["a", "b", "c"]), "a",
+            Solution().findLongestWord("abpcplea", ["a", "b", "c"]),
+            "a",
         )
 
     def test3(self):
         self.assertEqual(
-            Solution().findLongestWord("bora", ["y", "x", "c"]), "",
+            Solution().findLongestWord("bora", ["y", "x", "c"]),
+            "",
         )
 
     def test3(self):

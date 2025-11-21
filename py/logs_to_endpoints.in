@@ -1,0 +1,4 @@
+GET /user/sadfjnasie
+GET /user
+DELETE /user/sadfjnasie/preferences
+DELETE /user/sadfjnsadfa/preferences

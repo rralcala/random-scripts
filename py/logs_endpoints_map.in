@@ -1,0 +1,3 @@
+GET /user/<uid>, get_users
+GET /user, get_all_users
+DELETE /user/<uid>/preferences, delete_preferences
